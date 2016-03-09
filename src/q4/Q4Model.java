@@ -17,5 +17,6 @@ public class Q4Model {
 		 * Doit valider le mot pour que le nombre de caractères 
 		 * puisse être communiqué à l'interface
 		 */
+		nbcar.set(mot.length());
 	}
 }

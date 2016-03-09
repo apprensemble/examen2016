@@ -33,8 +33,12 @@ public class Q3Main {
 			MonthResult m1 = mapper.readValue(f1, MonthResult.class);
 			MonthResult m2 = mapper.readValue(f2, MonthResult.class);
 			MonthResult m3 = mapper.readValue(f3, MonthResult.class);
+			troisObjets.add(m1);
+			troisObjets.add(m2);
+			troisObjets.add(m3);
 
 			System.out.format("q3.b -> liste de 3 MonthResult :\n %s -> %s\n %s -> %s\n %s -> %s\n",f1, m1, f2, m2, f3, m3);
+			System.out.format("q3.b BIS avec la liste -> %s\n",troisObjets);
 
 		}
 		catch (IOException e) {

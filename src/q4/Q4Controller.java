@@ -14,10 +14,12 @@ public class Q4Controller {
 		/**
 		 * Demande au modèle de valider le mot
 		 */
+		model.valideMot(mot);
 	}
 	private void initialize() {
 		/**
 		 * initialise le binding modèle -> vue
 		 */
+		view.nb.textProperty().bind(model.nbcarProperty().asString());
 	}
 }

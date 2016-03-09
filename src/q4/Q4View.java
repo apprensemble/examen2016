@@ -1,9 +1,10 @@
 package q4;
-
+//VOGEL Thierry
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -36,6 +37,11 @@ public class Q4View extends BorderPane {
 		/**
 		 * initialise les actions
 		 */
+		// il manque l'action de validation lorsque l'on appuit sur le bouton
+		// il faut un evenement qui appel valider lorsque l'on clique sur valider
+		valider.addEventFilter(MouseEvent.MOUSE_CLICKED, evt -> {
+			valideMot();
+		});
 	}
 
 	private HBox getMotBox() {
@@ -66,5 +72,6 @@ public class Q4View extends BorderPane {
 		/**
 		 * Demande au contrôleur de valider le mot saisi
 		 */
+		controller.valideMot(mot.textProperty().getValue());
 	}
 }
